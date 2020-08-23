@@ -17,7 +17,6 @@ class ListPostContextProvider extends React.Component {
 
   async componentDidMount() {
     const result = await fetch("https://jsonplaceholder.typicode.com/posts");
-    console.log("triggered");
     this.setState({
       list_post: await result.json(),
     });
@@ -43,7 +42,6 @@ class ListPostContextProvider extends React.Component {
   handleUpdate = async (index, data) => {
     const temp = [...this.state.list_post];
     temp[index] = await data;
-    console.log(data);
     this.setState({ list_post: temp });
   };
 

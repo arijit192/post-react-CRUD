@@ -18,9 +18,6 @@ const CustomCard = styled(Card)({
 });
 
 class View extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <Container maxWidth="sm">

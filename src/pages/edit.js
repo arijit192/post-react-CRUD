@@ -45,9 +45,6 @@ class Edit extends React.Component {
       }
     }
   };
-  componentDidMount() {
-    console.log(this.props.location.query.parentProp);
-  }
   render() {
     return (
       <Container maxWidth="sm">

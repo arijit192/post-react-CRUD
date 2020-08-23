@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import ViewIcon from "@material-ui/icons/ViewList";
-import EditIcon from "@material-ui/icons/Edit";
 import NewIcon from "@material-ui/icons/Star";
 import LikeIcon from "@material-ui/icons/ThumbUp";
 import UnlikeIcon from "@material-ui/icons/ThumbDown";
