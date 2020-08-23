@@ -50,22 +50,39 @@ class Edit extends React.Component {
   }
   render() {
     return (
-      <Container>
+      <Container maxWidth="sm">
         <Header />
-        <h2 style={{ textAlign: "center" }}>Update the post</h2>
-        <TextField onChange={this.handleTitle} />
-        <TextField onChange={this.handleBody} />
-        <Button
-          onClick={async () => {
-            const data = await this.handleUpdate();
-            this.props.location.query.parentProp.handleUpdate(
-              this.props.location.query.index,
-              await data
-            );
-          }}
-        >
-          Update
-        </Button>
+        {this.state.submitted ? (
+          <div>
+            <h2>Post successfully edited</h2>
+          </div>
+        ) : (
+          <div>
+            <h2 style={{ textAlign: "center" }}>Update the post</h2>
+            <TextField
+              onChange={this.handleTitle}
+              id="standard-basic"
+              label="Title"
+            />
+            <TextField
+              onChange={this.handleBody}
+              id="standard-basic"
+              label="Body"
+            />
+            <Button
+              color="primary"
+              onClick={async () => {
+                const data = await this.handleUpdate();
+                this.props.location.query.parentProp.handleUpdate(
+                  this.props.location.query.index,
+                  await data
+                );
+              }}
+            >
+              Update
+            </Button>
+          </div>
+        )}
       </Container>
     );
   }
