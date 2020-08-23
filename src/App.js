@@ -42,7 +42,7 @@ class App extends React.Component {
                       <Liked list_context={{ ...list_context }} />
                     </Route>
                     <Route path="/search">
-                      <Search />
+                      <Search list_context={{ ...list_context }} />
                     </Route>
                   </Switch>
                 </Router>

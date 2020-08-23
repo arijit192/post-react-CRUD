@@ -6,6 +6,7 @@ import NewIcon from "@material-ui/icons/Star";
 import LikeIcon from "@material-ui/icons/ThumbUp";
 import UnlikeIcon from "@material-ui/icons/ThumbDown";
 import { styled } from "@material-ui/core/styles";
+import SearchIcon from "@material-ui/icons/Search";
 
 const CustomButton = styled(Button)({
   margin: ".5vw",
@@ -56,6 +57,15 @@ function Header() {
             startIcon={<UnlikeIcon />}
           >
             Disliked Post
+          </CustomButton>
+        </Link>
+        <Link to="/search">
+          <CustomButton
+            variant="contained"
+            color="primary"
+            startIcon={<SearchIcon />}
+          >
+            Search Post
           </CustomButton>
         </Link>
       </div>

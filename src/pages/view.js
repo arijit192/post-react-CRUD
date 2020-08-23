@@ -23,7 +23,6 @@ class View extends React.Component {
       <Container maxWidth="sm">
         <Header />
         <div>
-          {" "}
           {this.props.list_context.list_post.map((post, index) => (
             <CustomCard key={post.id}>
               <CardHeader title={post.title} />
